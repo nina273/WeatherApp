@@ -1,0 +1,33 @@
+p {
+    color: blue;
+    text-align: left;
+    font-style: oblique;
+    font-weight: bold;
+}
+.div1 {
+    color:blue;
+    background-color:lightblue;
+    border: solid 2px blue;
+}
+.mat-radio-button ~ .mat-radio-button {
+    margin-left: 16px;
+}
+.d1 {
+    background-color:rgb(75, 146, 212);
+    color: white;
+    text-shadow: whitesmoke;
+    border: solid 1px blue;
+    width: 25%;
+    text-align: center; 
+    border-bottom: none;
+}
+.d2{
+    background-color:rgb(75, 146, 212);
+    color: white;
+    text-shadow: whitesmoke;
+    border: solid 1px blue;
+    border-bottom: none;
+    width: 25%; 
+    height: 250px;
+}
+

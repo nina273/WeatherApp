@@ -1,0 +1,45 @@
+
+<div style="display: flex;">
+  <mat-form-field appearance="fill" style="width: 73%;">
+    <mat-label>{{name}}:</mat-label>
+    <input  matInput placeholder="Ex. 11.43,12.12, Ex. Banjaluka" [(ngModel)]="x"/>
+    <mat-hint self-align="end">lat,lon or name</mat-hint>
+  </mat-form-field>
+  <button class="btn btn-primary" (click)="onNewLocation()" style="margin-left: 20px; margin-top: 4px;  height: 45px;">Get data</button>
+</div>
+
+<hr>
+<div *ngIf ="buttonClicked" class="div1">{{name}} weather <br><br>
+    Dew Point: {{dewPoint}}° <br>
+    Humidity: {{dataH}}%<br>
+    Temperature: {{temp}}
+    <hr>
+    <div style="display: flex;" class="div1">
+        <div class="d1">{{fog}}% <br>Fog</div>
+        <div class="d1">{{LowClouds}}% <br>Low Clouds</div>
+        <div class="d1">{{MediumClouds}}% <br>Medium Clouds</div>
+        <div class="d1">{{HighClouds}}% <br>High Clouds</div>
+    </div>
+    <div style="display: flex;" class="div1">
+      <div class="d2">
+        <img *ngIf = "foggy" src = "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSF63eg0rXy2H6AcLUXt6H4p5Uh0agghnkHog&usqp=CAU" style="width: 25%; height: 300px;"> 
+        <img *ngIf ="!foggy" src = "assets/img/circle-cropped.png" style="margin-top: 70px; width:90%;height:30%;">
+        </div>
+      <div class="d2">
+        <img *ngIf = "cloudyL" src="assets/img/cloud.jpg" style="opacity: 1; margin-top: 100px; width:100%;height:40%;">
+        <img *ngIf = "partially_cloudyL" src="assets/img/cloud.jpg" style="opacity: 0.5; margin-top: 100px; width:100%;height:40%;">
+      </div>
+      <div class="d2">
+        <img *ngIf = "cloudyM" src="assets/img/cloud.jpg" style="opacity: 1; margin-top: 70px; width:100%;height:40%;">
+        <img *ngIf = "partially_cloudyM" src="assets/img/cloud.jpg" style="opacity: 0.5; margin-top: 70px; width:100%;height:40%;">
+        
+      </div>
+      <div class="d2">
+        <img *ngIf = "cloudyH" src="assets/img/cloud.jpg" style="opacity: 1; margin-top: 40px; width:100%;height:40%;">
+        <img *ngIf = "partially_cloudyH" src="assets/img/cloud.jpg" style="opacity: 0.5; margin-top: 40px; width:100%;height:40%;">
+      </div>
+    </div>
+  </div>
+<hr>
+
+
